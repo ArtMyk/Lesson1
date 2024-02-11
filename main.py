@@ -26,7 +26,18 @@
 
 #################################################
 
-n1, n2 = 10, 20
-print(n1 > n2)
-print(n1 >= n2)
-print(n1 < n2)
+# n1, n2 = 10, 20
+# print(n1 > n2)
+# print(n1 >= n2)
+# print(n1 < n2)
+
+##############################################
+
+hours = int(input("Enter hours:"))
+
+if hours >= 12 and hours <= 23:
+    print("PM")
+elif hours >= 0 and hours < 12:
+    print("AM")
+else:
+    print("Incorrect hours!")
