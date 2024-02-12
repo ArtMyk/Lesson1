@@ -55,49 +55,52 @@
 #     print ("Incorrect rating!")
 
 ###############################################
-
-number = int(input("Enter three digits: "))
-n1 = number // 100
-n2 = number // 10 % 10
-n3 = number % 10
-
-biggest = n1 >= n2 and n1 >= n3
-smalest = n1 <= n2 and n1 <= n3
-arithmetic_mean = (n1 + n2 + n3) / 3
-
-biggest_calculating = 1
-smalest_calculating = 2
-arithmetic_mean_calculating = 3
-
-print("task #: 1 biggest_calculating, 2 smalest_calculating 3 arithmetic_mean_calculating")
-
-task = int(input("Enter task: "))
-
-if task > 0 and task <= 3:
-
-    if 1 == biggest_calculating:
-        if task == biggest_calculating:
-            if n1 >= n2 and n1 >= n3:
-                print(f"biggest: {n1}")
-
-            elif n2 >= n1 and n2 >= n3:
-                print(f"biggest: {n2}")
-
-            elif n3 >= n2 and n3 >= n1:
-                print(f"biggest: {n3}")
-
-    if 2 == smalest_calculating:
-        if task == smalest_calculating:
-            if n1 <= n2 and n1 <= n3:
-                print(f"smalest: {n1}")
-
-            elif n2 < n1 and n2 < n3:
-                print(f"smalest: {n2}")
-
-    if task == arithmetic_mean_calculating:
-        print(f"arithmetic_mean: {arithmetic_mean}")
-else:
-    print("Incorrect task number!")
+#
+# number = int(input("Enter three digits: "))
+# n1 = number // 100
+# n2 = number // 10 % 10
+# n3 = number % 10
+#
+# biggest = n1 >= n2 and n1 >= n3
+# smalest = n1 <= n2 and n1 <= n3
+# arithmetic_mean = (n1 + n2 + n3) / 3
+#
+# biggest_calculating = 1
+# smalest_calculating = 2
+# arithmetic_mean_calculating = 3
+#
+# print("task #: 1 biggest_calculating, 2 smalest_calculating 3 arithmetic_mean_calculating")
+#
+# task = int(input("Enter task: "))
+#
+# if task > 0 and task <= 3:
+#
+#     if 1 == biggest_calculating:
+#         if task == biggest_calculating:
+#             if n1 >= n2 and n1 >= n3:
+#                 print(f"biggest: {n1}")
+#
+#             elif n2 >= n1 and n2 >= n3:
+#                 print(f"biggest: {n2}")
+#
+#             elif n3 >= n2 and n3 >= n1:
+#                 print(f"biggest: {n3}")
+#
+#     if 2 == smalest_calculating:
+#         if task == smalest_calculating:
+#             if n1 <= n2 and n1 <= n3:
+#                 print(f"smalest: {n1}")
+#
+#             elif n2 < n1 and n2 < n3:
+#                 print(f"smalest: {n2}")
+#
+#             elif n3 < n1 and n3 < n3:
+#                 print(f"smalest: {n3}")
+#
+#     if task == arithmetic_mean_calculating:
+#         print(f"arithmetic_mean: {arithmetic_mean}")
+# else:
+#     print("Incorrect task number!")
 
 #################################################
 
@@ -131,3 +134,21 @@ else:
 #             print(f"meters_to_miles_mean_calculating: {m1eters_to_inches}")
 # else:
 #     print("Incorrect task number!")
+
+#####################################################################
+
+# number = int(input("Enter three digits: "))
+#
+# n1 = number // 100
+# n2 = number // 10 % 10
+# n3 = number % 10
+#
+# print (f"n1: {n1} n2: {n2} n3: {n3}")
+#
+# if n1 == n2 == n3:
+#         print("number of equals: 3")
+#
+# elif n1 == n2 or n1 == n3 or n2 == n3:
+#     print("number of equals: 2")
+
+
