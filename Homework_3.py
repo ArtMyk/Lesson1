@@ -24,16 +24,20 @@
 
 #############################################
 
-number = int(input("Enter two numbers: "))
+try:
+    number = int(input("Enter two numbers: "))
 
-n1 = number // 10
-n2 = number // 1 % 10
-print(f"Numbers: {n1}, {n2}")
+    n1 = number // 10
+    n2 = number // 1 % 10
+        print(f"Numbers: {n1}, {n2}")
 
 
-if n1 == n2:
-    print("True")
-if n1 > n2:
-    print(f"n2 smaler: {n2}, {n1}")
-if n1 < n2:
-    print(f"n1 smaler: {n1}, {n2}")
+    if n1 == n2:
+        print("True")
+    if n1 > n2:
+        print(f"n2 smaler: {n2}, {n1}")
+    if n1 < n2:
+        print(f"n1 smaler: {n1}, {n2}")
+
+except Exception as e:
+    print(f"Error: {e}")
