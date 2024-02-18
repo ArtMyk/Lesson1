@@ -150,5 +150,75 @@
 #
 # elif n1 == n2 or n1 == n3 or n2 == n3:
 #     print("number of equals: 2")
-
+#
+#######################################
+#
+# n1, n2 = 10, 1
+# print(n1 / n2)
+#
+# num = float(input("Enter the number"))
+# print(num)
+# print(int(num))
+#
+########################################
+# try:
+#     num1 = int(input("Enter first number: "))
+#     num2 = int(input("Enter second number: "))
+#
+#     result = num1 / num2
+#
+#     print(f"Result: {result}")
+# except ZeroDivisionError as error:
+#     print(f"ZeroDivisionError occured: {error}")
+# except ValueError as error:
+#     print("Enter only integer numbers please!")
+#     print(f"ValueError: {error}")
+# except Exception as error:
+#     print(f"Exeption occurred: {error}")
+# finally:
+#     print("End of calculation")
+#
+# print("some text")\
+#
+################################################
+# try:
+#     name = input("Enter you name")
+#
+#     if 1 < len(name) <= 20:
+#         print(f"Hello, {name}")
+#     else:
+#         raise Exception("Please enter a valid name!")
+# except Exception as e:
+#     print(f"Error: {e}")
+#
+###########################################
+# try:
+#     print("1. Start game\n2. Settings\n3. Saved games\n4. Exit")
+#     user_select = int(input("Enter menu number: "))
+#
+#     if user_select == 1:
+#         print("Game started")
+#     elif user_select == 2:
+#         print("Settings opened")
+#     elif user_select == 3:
+#         print("Saved games opened")
+#     elif user_select == 4:
+#         pritn("Exit...")
+#     else:
+#         print("Incorrect menu item!")
+#
+#     match user_select:
+#         case 1:
+#             print("Game started")
+#         case 2:
+#             print("Settings opened")
+#         case 3:
+#             print("Saved games opened")
+#         case 4:
+#             print("Exit...")
+#         case _:
+#             print("Incorrect manu item!")
+#
+# except Exception as e:
+#     print(f"Error: {e}")
 
