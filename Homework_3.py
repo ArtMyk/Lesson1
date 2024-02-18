@@ -29,8 +29,6 @@ try:
 
     n1 = number // 10
     n2 = number // 1 % 10
-        print(f"Numbers: {n1}, {n2}")
-
 
     if n1 == n2:
         print("True")
