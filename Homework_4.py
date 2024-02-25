@@ -1,12 +1,17 @@
-# count = 0
 # text = input("Enter some text: ")
 #
+# letter_count = 0
+# digit_count = 0
+#
 # for symbol in text:
-#     if symbol.isalpha():
-#         count += 1
+#    if symbol.isalpha():
+#        letter_count += 1
+#    elif symbol.isdigit():
+#        digit_count += 1
 #
-#     print(f"count: {count}")
-#
+# print("Number of letters:", letter_count)
+# print("Number of digits:", digit_count)
+
 ##################################
 #
 # text = input("Enter some text: ")
@@ -16,22 +21,22 @@
 #     if letter == search:
 #         count += 1
 # print("result:", count)
-#
+
 ##################################
 #
-# text = input("Enter some text: ")
-# print(text)
+# text = input("Enter the original string: ")
 #
-# _old = input("Enter word you want to change: ")
-# _new = input("Enter word new word: ")
+# search_word = input("Enter the word to replace: ")
+# replace_word = input("Enter the replacement word: ")
+# corrected_text = text.replace(search_word, replace_word)
 #
-# text = text.replace("hello", "goodbye")
-# print(text)
-#
+# print("Corrected text: " + corrected_text)
 ########################################
-#
+
 count = 0
+
 text = "Hello my neighbors"
+
 print(text[2:3])
 print(text[16:17])
 print(text[:5])
@@ -40,5 +45,6 @@ print(text[0:18:2])
 print(text[1:18:2])
 print(text[::-1])
 print(text[::-2])
+
 print(len(text))
 
