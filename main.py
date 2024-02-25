@@ -221,4 +221,233 @@
 #
 # except Exception as e:
 #     print(f"Error: {e}")
+#
+##################################################
+#
+# try:
+#     num1, num2 = int(input("Enter first number: ")), int(input("Enter second number: "))
+#     result = num1 / num2
+# except Exception as error:
+#     print(error)
+#
+# print("Hello")
+#
+###################################
+#
+# i = 0
+#
+# while True :
+#
+#     if i == 5:
+#         i += 1
+#         print("contonue...")
+#         continue
+#
+#     if i > 10:
+#         print("break...")
+#         break
+#
+#     print(i)
+#
+#     i += 1
+#
+# print("hello")
+#
+########################################################
+#
+sum_nums = 0
+count = 0
 
+try:
+    while True:
+        num = int(input("Enter number: "))
+
+        if num == 0:
+            print("end...")
+            break
+
+        sum_nums += num
+        count += 1
+
+    average = sum_nums / count
+    print(f"sum_nums: {sum_nums}")
+    print(f"count: {count}")
+    print(f"average: {average}")
+except ValueError as e:
+    print("Enter numbers only")
+except Exception as e:
+    print(e)
+
+#############################################################
+#
+# for i in range(3):
+#
+#     print(i, end=" ")
+#
+# print()
+#
+# for i in range(2, 5):
+#
+#     print(i, end=" ")
+#
+# print()
+#
+# for i in range(1, 6, 2):
+#
+#     print(i, end=" ")
+#
+# start, end = 1, 10
+# for i in range(start, end + 1):
+#     print(i, end=" ")
+#
+# print()
+#
+# start, end = 1, 10
+# for i in range(end, start -1, -2):
+#
+#     print(i, end=" ")
+#
+###############################################################
+#
+# for  value in 1, 4, "adsd", True, "sdfsdfsdf":0
+#     print(value)
+#
+############################################################
+
+start = int(input("Enter start value "))
+end = int(input("Enter end value: "))
+
+if start > end:
+    start, end = end, start
+
+
+if start > end:
+    temp = start
+    start = end
+    end = temp
+
+for number in range(start, end + 1):
+    is_simple = True
+
+    if number < 2:
+        continue
+
+    for i in range(2, number):
+        if number % i == 0:
+            is_simple = False
+            break
+
+    if is_simple:
+        print(number, end=" ")
+
+#################################################
+#
+# message = "hello world"
+# message_1 = 'hello world'
+# print(message)
+#
+# text = "hello" \
+#         "world"
+# print(text)
+#
+############################
+# text = '''
+# qwerty
+#     asdsvf
+#         asdfsdf
+# '''
+#
+# print(text)
+#
+# path = r"C:\Users\admin\PycharmProjects\FastAPI_materials"
+# print(path)
+#
+# path = "C:\\Users\\admin\\PycharmProjects\\FastAPI_materials"
+# print(path)
+#
+###############################
+#
+# print("hello, \"world\"\n\tfrom program")
+#
+###############################
+# dogs, cats = 12, 15
+# result = f"Dogs {dogs} and cats {cats}"
+# print (result)
+
+# text = "Dogs {} and cats {}"
+# result = text.format(dogs,cats)
+# print(result)
+
+# result = "Dogs {1} and cats {0}".format (dogs, cats )
+# print(result)
+#
+# result = "Dogs {1} and cats {1}".format(dogs, cats)
+# print(result)
+#
+###############################
+#
+# message = "hello world"
+#
+# print(message[0])
+# print(len(message))
+# print(message[len(message) - 1])
+# print(message[-3])
+#
+###############################
+#
+# name ="Petya"
+# print(name)
+#
+# user_name = "Vasia"
+# name = user_name
+# print(name)
+#
+# ###############################
+
+# sentance = "Hello, world"
+# # for letter in sentance:
+# #     print(letter, end=" ")
+# #
+# # print()
+#
+# for i in range(len(sentance)):
+#     print(sentance[i], end=" ")
+#
+# # ###############################
+#
+# sentance = "Hello worl"
+# print(sentance[:])
+# print(sentance[0:])
+# print(sentance[2:])
+# print(sentance[2:8])
+# print(sentance[1:10:2])
+# print(sentance[::-1])
+#
+# ###############################
+#
+# name = "Vasya"
+# surname = "Petrov"
+# age = 33
+#
+# fullname = name + " " + surname + " " + str(age)
+# print(fullname)
+#
+# ###############################
+#
+# text = "Hello, world" * 3
+# print(text)
+#
+# print("------" * 10)
+#
+# ###############################
+#
+# a1 = "abc"
+# a2 = "abs"
+#
+# if a1 > a2:
+#     print(a1)
+# else:
+#     print(a2)
+#
+# print(ord("A"))
+# print(chr(98))

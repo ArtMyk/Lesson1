@@ -9,13 +9,13 @@
 #     elif user_select == 3:
 #         print("Wednesday")
 #     elif user_select == 4:
-#         pritn("Thursday")
+#         print("Thursday")
 #     elif user_select == 5:
-#         pritn("Friday")
+#         print("Friday")
 #     elif user_select == 6:
-#         pritn("Saturday")
+#         print("Saturday")
 #     elif user_select == 7:
-#         pritn("Sunday")
+#         print("Sunday")
 #     else:
 #         print("Incorrect day number!")
 #
@@ -41,31 +41,31 @@
 #     print(f"Error: {e}")
 
 ###################################################
-
-
-try:
-    number = int(input("Enter two numbers: "))
-
-    n1 = number // 10
-    n2 = number // 1 % 10
-
-    print("1. Addition\n2. Subtraction\n3. Multiplication\n4. Division")
-    user_select = int(input("Mathematical operation: "))
-
-    if user_select == 1:
-        addition_result = n1 + n2
-        print(f"Result: {addition_result} ")
-    elif user_select == 2:
-        subtraction_result = n1 - n2
-        print(f"Result: {subtraction_result} ")
-    elif user_select == 3:
-        multiplication_result = n1 * n2
-        print(f"Result: {multiplication_result} ")
-    elif user_select == 4:
-        division_result = n1 / n2
-        print(f"Result: {division_result} ")
-    else:
-        print("Enter correct mathematical operation number!")
-
-except Exception as e:
-    print(f"Error: {e}")
+#
+#
+# try:
+#     number = int(input("Enter two numbers: "))
+#
+#     n1 = number // 10
+#     n2 = number // 1 % 10
+#
+#     print("1. Addition\n2. Subtraction\n3. Multiplication\n4. Division")
+#     user_select = int(input("Mathematical operation: "))
+#
+#     if user_select == 1:
+#         addition_result = n1 + n2
+#         print(f"Result: {addition_result} ")
+#     elif user_select == 2:
+#         subtraction_result = n1 - n2
+#         print(f"Result: {subtraction_result} ")
+#     elif user_select == 3:
+#         multiplication_result = n1 * n2
+#         print(f"Result: {multiplication_result} ")
+#     elif user_select == 4:
+#         division_result = n1 / n2
+#         print(f"Result: {division_result} ")
+#     else:
+#         print("Enter correct mathematical operation number!")
+#
+# except Exception as e:
+#     print(f"Error: {e}")
