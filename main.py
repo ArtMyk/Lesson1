@@ -13,10 +13,10 @@
 # print (f"Multiplication: {multiplication}")
 #
 #
-# lenghtAB = int(input("Enter first number: "))
-# lenghtCD = int(input("Enter second number: "))
-# area = ((lenghtAB * lenghtCD)/2)
-# print (f"lenghtAB: {lenghtAB} lenghtCD: {lenghtCD}")
+# lengthAB = int(input("Enter first number: "))
+# lengthCD = int(input("Enter second number: "))
+# area = ((lengthAB * lengthCD)/2)
+# print (f"lengthAB: {lengthAB} lengthCD: {lengthCD}")
 # print (f"area: {area}")
 #
 # number = input("Enter for digit number: ")
@@ -62,14 +62,14 @@
 # n3 = number % 10
 #
 # biggest = n1 >= n2 and n1 >= n3
-# smalest = n1 <= n2 and n1 <= n3
+# smallest = n1 <= n2 and n1 <= n3
 # arithmetic_mean = (n1 + n2 + n3) / 3
 #
 # biggest_calculating = 1
-# smalest_calculating = 2
+# smallest_calculating = 2
 # arithmetic_mean_calculating = 3
 #
-# print("task #: 1 biggest_calculating, 2 smalest_calculating 3 arithmetic_mean_calculating")
+# print("task #: 1 biggest_calculating, 2 smallest_calculating 3 arithmetic_mean_calculating")
 #
 # task = int(input("Enter task: "))
 #
@@ -86,16 +86,16 @@
 #             elif n3 >= n2 and n3 >= n1:
 #                 print(f"biggest: {n3}")
 #
-#     if 2 == smalest_calculating:
-#         if task == smalest_calculating:
+#     if 2 == smallest_calculating:
+#         if task == smallest_calculating:
 #             if n1 <= n2 and n1 <= n3:
-#                 print(f"smalest: {n1}")
+#                 print(f"smallest: {n1}")
 #
 #             elif n2 < n1 and n2 < n3:
-#                 print(f"smalest: {n2}")
+#                 print(f"smallest: {n2}")
 #
 #             elif n3 < n1 and n3 < n3:
-#                 print(f"smalest: {n3}")
+#                 print(f"smallest: {n3}")
 #
 #     if task == arithmetic_mean_calculating:
 #         print(f"arithmetic_mean: {arithmetic_mean}")
@@ -131,7 +131,7 @@
 #             print(f"meters_to_miles_calculating: {meters_to_yards}")
 #     if 3 == meters_to_miles_mean_calculating:
 #         if task == meters_to_miles_mean_calculating:
-#             print(f"meters_to_miles_mean_calculating: {m1eters_to_inches}")
+#             print(f"meters_to_miles_mean_calculating: {meters_to_inches}")
 # else:
 #     print("Incorrect task number!")
 
@@ -169,12 +169,12 @@
 #
 #     print(f"Result: {result}")
 # except ZeroDivisionError as error:
-#     print(f"ZeroDivisionError occured: {error}")
+#     print(f"ZeroDivisionError occurred: {error}")
 # except ValueError as error:
 #     print("Enter only integer numbers please!")
 #     print(f"ValueError: {error}")
 # except Exception as error:
-#     print(f"Exeption occurred: {error}")
+#     print(f"Exception occurred: {error}")
 # finally:
 #     print("End of calculation")
 #
@@ -203,7 +203,7 @@
 #     elif user_select == 3:
 #         print("Saved games opened")
 #     elif user_select == 4:
-#         pritn("Exit...")
+#         print("Exit...")
 #     else:
 #         print("Incorrect menu item!")
 #
@@ -240,7 +240,7 @@
 #
 #     if i == 5:
 #         i += 1
-#         print("contonue...")
+#         print("continue...")
 #         continue
 #
 #     if i > 10:
@@ -367,7 +367,7 @@
 #
 ###############################
 #
-# print("hello, \"world\"\n\tfrom program")
+# print("hello, \"world\"\n\from program")
 #
 ###############################
 # dogs, cats = 12, 15
@@ -404,24 +404,24 @@
 #
 # ###############################
 
-# sentance = "Hello, world"
-# # for letter in sentance:
+# sentence = "Hello, world"
+# # for letter in sentence:
 # #     print(letter, end=" ")
 # #
 # # print()
 #
-# for i in range(len(sentance)):
-#     print(sentance[i], end=" ")
+# for i in range(len(sentence)):
+#     print(sentence[i], end=" ")
 #
 # # ###############################
 #
-# sentance = "Hello worl"
-# print(sentance[:])
-# print(sentance[0:])
-# print(sentance[2:])
-# print(sentance[2:8])
-# print(sentance[1:10:2])
-# print(sentance[::-1])
+# sentence = "Hello world"
+# print(sentence[:])
+# print(sentence[0:])
+# print(sentence[2:])
+# print(sentence[2:8])
+# print(sentence[1:10:2])
+# print(sentence[::-1])
 #
 # ###############################
 #
@@ -452,6 +452,8 @@
 # print(ord("A"))
 # print(chr(98))
 #
+################################## 21.01.2024
+#
 # num = 20
 #
 # match num:
@@ -462,10 +464,328 @@
 #     case _:
 #         print()
 #
-# text = "hello world. goodby world."
+# text = "hello world. goodbye world."
 # search_item = ". "
 # current_index = text. find(search_item)
 #
 # first_sentence = text[:current_index + len(search_item)]
 # second_sentence = text[current_index + len(search_item):]
 #
+# final_sentence = first_sentence.capitalize() + second_sentence.capitalize()
+# print(final_sentence)
+#
+# print(text.count("."))
+#
+# symbol = "* "
+
+# v1
+# for i in range (1, 6):
+#     print(symbol * i)
+
+# v2
+# counter = 1
+#
+# for i in range(5):
+#     for j in range(counter):
+#         print(symbol, end="")
+#     print()
+#     counter += 1
+
+# for i in range(5):
+#     if i == 0 or i == 4:
+#         for j in range(5):
+#             print(symbol, end="")
+#     else:
+#         print(symbol, end="")
+#         for j in range(3):
+#             print("  ", end="")
+#         print(symbol, end="")
+#     print()
+#
+# stars_count = 5
+# whitespace_count = 0
+
+# for i in range(5):
+#     for j in  range(whitespace_count):
+#         print("  ", end="")
+#
+#     for j in range(stars_count):
+#         print(symbol, end="")
+#
+#     for j in range(whitespace_count):
+#         print("  ", end="")
+#
+#     if i < 2:
+#         stars_count -= 2
+#         whitespace_count += 1
+#     else:
+#         stars_count += 2
+#         whitespace_count -= 1
+#     print()
+#
+# numbers = []
+# numbers_1 = list()
+# print(type(numbers))
+# print(type(numbers_1))
+#
+# numbers = [1, 3, 25, 7, 2, 7]
+#
+# print(numbers)
+# print(numbers[0])
+#
+# numbers[2] = 11111
+# print(numbers)
+# print(len(numbers))
+# print(numbers[-1])
+#
+# for i in range(len(numbers)):
+#     print(numbers[i], end=" ")
+#
+# print()
+#
+# for number in numbers:
+#     print(number, end=" ")
+#
+# print()
+# value = ["one", 12, 12.4, True]
+# print(value)
+#
+# nums = [1, 3] * 5
+# print(nums)
+#
+# numbers = [1, 3, 25, 7, 2, 7]
+#
+# print(numbers[:])
+# print(numbers[1:5])
+# print(numbers[1:5:2])
+# print(numbers[::-1])
+#
+# users = ["Vasya", "Petya", "Kolya"]
+# user_1, user_2, user_3 = users
+# user_1, user_2, user_3 = users[0], users[1], users[2]
+# print(user_1)
+# print(user_2)
+# print(user_3)
+# print(users)
+
+# import random
+
+# print(random.randint(1, 10))
+# NUM_SIZE = 10
+# numbers = []
+#
+# for i in range(NUM_SIZE):
+#     numbers.append(random.randint(1, 10))
+#
+# print(numbers)
+
+# #append(item): додає елемент item до кінця списку
+#
+# numbers.append(2222)
+# print(numbers)
+#
+# #insert(index, item): додає елемент item до списку за індексом index
+#
+# numbers.insert(1, 3333)
+# print(numbers)
+#
+# #extend(items): додає набір елементів items до кінця списку
+#
+# numbers.extend([2, 3, 4])
+# print(numbers)
+#
+# numbers += [1, 2, 3, 4]
+# print(numbers)
+# #
+# # remove(item): видаляє елемент item. Видаляється лише перше входження елемента.
+# # Якщо елеменит не знайдено, генерує виняток ValueError
+# #
+# numbers.remove(2222)
+# print(numbers)
+# #
+# # clear(): видалення всіх елементів зі списку
+# #
+# numbers.clear()
+# print(numbers)
+#
+# del numbers # видаляє змінну
+# print(numbers)
+## index(item):повертає індекс елемента item. Якщо елемент не знайдено, генерує виняток ValueError
+#
+# print(numbers.index(2))
+# print(numbers)
+#
+# # pop([index]): видаляє та повертає елемент за індексом index.
+# result = numbers.pop()
+# print(result)
+# print(numbers)
+## count(item): повертає кількість входжень елемента item до списку
+##
+# print(numbers.count(1))
+#
+# v1
+# numbers.sort()
+# print(numbers)
+# # v2
+# numbers_sorted = sorted(numbers)
+# print(numbers_sorted)
+# print(numbers)
+#
+# people = ["Tom", "bob", "alice", "Sam", "Bill"]
+# # v1
+# # people.sort()
+# # print(people)
+# # v2
+# # people.sort(key=str.lower)
+# # print(people)
+# ##
+# people_sorted = sorted(people, key=str.lower)
+# print(people_sorted)
+# print(people)
+
+# reverse(): розставляє всі елементи у списку у зворотньому порядку
+
+# numbers.reverse()
+# print(numbers)
+
+# copy(): копіює список
+#
+# nums_1 = [1, 3, 5]
+# nums_copy = nums_1.copy()
+# print(nums_1)
+# print(nums_copy)
+# nums_copy[1] = 1111
+# print(nums_1)
+# print(nums_copy)
+
+# #len(list): повертає довжину списку
+#
+# print(len(numbers))
+#
+# # min(list): повертає найменший елемент списку
+#
+# print(min(numbers))
+#
+# # max(list): повертає найбільший елемент списку
+#
+# print(max(numbers))
+
+###############
+# text = "hello world. goodbye world."
+# search_item = ". "
+#
+# sentences = text.split(search_item)
+# print(sentences)
+#
+# result = []
+#
+# for sentence in sentences:
+#     result.append(sentence.capitalize())
+#
+# print(result)
+#
+# result_sentence = search_item.join(result)
+# print(result_sentence)
+
+##
+# створити список із 10 випадкових чисел
+# поміняти місцями мінімальне значення з максимальним
+# [3, 1, 4, 2, 5] -> [3, 5, 4, 2, 1]
+#
+# numbers = [3, 1, 4, 2, 5]
+#
+# # v1
+# print(numbers)
+#
+# min_value = min(numbers)
+# max_value = max(numbers)
+#
+# min_value_index = numbers.index(min_value)
+# max_value_index = numbers.index(max_value)
+#
+# numbers[min_value_index] = max_value
+# numbers[max_value_index] = min_value
+#
+# print(numbers)
+
+# v2
+
+# numbers_copy = numbers.copy()
+#
+# print(numbers)
+#
+# numbers_copy[numbers.index(min(numbers))], numbers_copy[numbers.index(max(numbers))] = max(numbers), min(numbers)
+# numbers = numbers_copy.copy()
+# print(numbers)
+#
+
+# problem
+# numbers[numbers.index(min(numbers))], numbers[numbers.index(max(numbers))] = 111, 222
+# numbers[numbers.index(min(numbers))] = 111
+# numbers[numbers.index(max(numbers))] = 222
+
+# print(numbers)
+
+###############
+# numbers = ["Vasya", 33, ["dance", "walk"]]
+# print(numbers)
+# print(numbers[2])
+# print(numbers[2][0])
+
+##
+# v1
+# array = [
+#     [1, 3, 2],
+#     [1, 4],
+#     1,
+#     [
+#         [1, 2],
+#         [3, 5]
+#     ]
+# ]
+# print(array)
+# print(array[3][1][1])
+# print(array[3][0][0])
+# v2
+# matrix = [
+#     [24, 41, 15, 62],
+#     [22, 41, 15, 62],
+#     [25, 42, 11, 66],
+#     [27, 46, 16, 63]
+# ]
+
+# print(matrix[0][1])
+# #
+# for row in matrix:
+#     for number in row:
+#         print(number, end=" ")
+#     print()
+
+#
+# import random
+#
+# matrix = []
+#
+# print(matrix)
+# for i in range(10):
+#     matrix.append([])
+#     for j in range(10):
+#         matrix[i].append(random.randint(10, 99))
+#
+# print(matrix)
+#
+# v1
+# print(len(matrix))
+# print()
+#
+# for i in range(len(matrix)):
+#     for j in range(len(matrix[i])):
+#         print(matrix[i][j], end=" ")
+#     print()
+#
+# print()
+# # # v2
+# for row in matrix:
+#     for number in row:
+#         print(number, end=" ")
+#     print()
