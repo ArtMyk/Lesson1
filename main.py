@@ -569,7 +569,7 @@
 # print(users)
 
 # import random
-
+#
 # print(random.randint(1, 10))
 # NUM_SIZE = 10
 # numbers = []
@@ -693,8 +693,8 @@
 # [3, 1, 4, 2, 5] -> [3, 5, 4, 2, 1]
 #
 # numbers = [3, 1, 4, 2, 5]
-#
-# # v1
+
+# v1
 # print(numbers)
 #
 # min_value = min(numbers)
@@ -789,3 +789,113 @@
 #     for number in row:
 #         print(number, end=" ")
 #     print()
+#
+#
+################################# Homework 5 - 1
+
+import random
+
+NUM_SIZE = 10
+numbers = []
+
+for i in range(NUM_SIZE):
+    numbers.append(random.randint(-10, 10))
+
+print(numbers)
+
+sum_of_negative_numbers = 0
+
+for j in range(NUM_SIZE):
+    if numbers[j] < 0:
+        sum_of_negative_numbers += numbers[j]
+
+print("Sum of negative numbers: ", sum_of_negative_numbers)
+
+sum_of_even_numbers = 0
+
+for j in range(NUM_SIZE):
+    if numbers[j]%2 == 0:
+        sum_of_even_numbers += numbers[j]
+print("Sum of even numbers: ", sum_of_even_numbers)
+
+sum_of_odd_numbers = 0
+
+for j in range(NUM_SIZE):
+    if numbers[j]%2 != 0:
+        sum_of_odd_numbers += numbers[j]
+
+print("Sum of odd numbers: ", sum_of_odd_numbers)
+
+sum_of_odd_numbers = 0
+
+for j in range(NUM_SIZE):
+    if numbers[j]%2 == 0:
+        sum_of_odd_numbers += numbers[j]
+
+print("Sum of odd numbers: ", sum_of_odd_numbers)
+
+sum_of_elements_with_multiple_of_3 = 0
+for i in range(len(numbers)):
+    if i % 3 == 0:
+        sum_of_elements_with_multiple_of_3 += numbers[i]
+
+print("Sum of elements with multiple of 3:", sum_of_elements_with_multiple_of_3)
+
+min_index = numbers.index(min(numbers))
+max_index = numbers.index(max(numbers))
+
+if min_index > max_index:
+    min_index, max_index = max_index, min_index
+
+sum_btw_min_and_max_index = 0
+for i in range(min_index + 1, max_index):
+    sum_btw_min_and_max_index += numbers[i]
+
+print("Sum btw min and max index: ", sum_btw_min_and_max_index)
+
+first_positive_index = last_positive_index = 0
+for i in range(NUM_SIZE):
+    if numbers[i] > 0:
+        first_positive_index = i
+        break
+
+for i in range(NUM_SIZE -1, -1, -1):
+    if numbers[i] > 0:
+        last_positive_index = i
+        break
+
+print(first_positive_index, last_positive_index)
+
+sum_btw_first_and_last_positive_elements = 0
+for i in range(first_positive_index +1, last_positive_index):
+    sum_btw_first_and_last_positive_elements = numbers[i]
+
+print("Sum btw first and last positive elements: ", sum_btw_first_and_last_positive_elements)
+
+######################################### Homework 5-2
+
+import random
+
+NUM_SIZE = 10
+numbers = []
+
+for i in range(NUM_SIZE):
+    numbers.append(random.randint(-10, 10))
+
+print(numbers)
+
+numbers_even = [j for j in numbers if j % 2 == 0]
+
+print(numbers_even)
+
+numbers_odd = [j for j in numbers if j % 2 != 0]
+
+print(numbers_odd)
+
+nums_negative = [j for j in numbers if j < 0]
+
+print(nums_negative)
+
+nums_positive = [j for j in numbers if j > 0]
+
+print(nums_positive)
