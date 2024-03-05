@@ -1616,106 +1616,497 @@
 #
 # product = list_num.mult(list_num)
 # print("Добуток елементів списку:", list_num)
+#
+# ################ Homework 6
+#
+# import random
+#
+# NUM_SIZE = 5
+# list_num = []
+#
+# for i in range(NUM_SIZE):
+#     list_num .append(random.randint(1, 5))
+#
+# print(list_num)
+#
+# ################ Homework 6-1
+#
+# def multiply_list_elements(list_num):
+#
+#     result = 1
+#     for num in list_num:
+#         result *= num
+#     return result
+#
+# multiply_list = multiply_list_elements(list_num)
+# print("Multiply list elements: ", multiply_list)
+#
+# ################# Homework 6-2
+#
+# def find_minimum(list_num):
+#     if not list_num:
+#         return None
+#     min_element = list_num[0]
+#     for num in list_num:
+#         if num < min_element:
+#             min_element = num
+#     return min_element
+#
+# min_value = find_minimum(list_num)
+# print("Minimum in list: ", min_value)
+#
+# ################# Homework 6-3
+#
+# def is_prime(n):
+#
+#     if n <= 1:
+#         return False
+#     for i in range(2, int(n ** 0.5) + 1):
+#         if n % i == 0:
+#             return False
+#     return True
+#
+# def count_primes(list_num):
+#
+#     count = 0
+#     for num in list_num:
+#         if is_prime(num):
+#             count += 1
+#     return count
+#
+# prime_count = count_primes(list_num)
+# print("The number fo prime numbers in the list: ", prime_count)
+#
+# ################# Homework 6-4
+#
+# def remove_element(list_num, target):
+#
+#     count_removed = 0
+#     if target not in list_num:
+#         print("There is no this number!")
+#     else:
+#         while target in list_num:
+#             list_num.remove(target)
+#             count_removed += 1
+#     return count_removed
+#
+# target_number =  int(input("Enter number to remove: "))
+# removed_count = remove_element(list_num, target_number)
+# print("Removed items count: ", removed_count)
+# print("List after removing: ", list_num)
+#
+# ################# Homework 6-5
+#
+# first_list = [7, 5, 3, 5, 2]
+# second_list = [4, 5, 6, 3]
+#
+# def merge_lists(first_list, second_list):
+#
+#     merged_list = first_list + second_list
+#     return merged_list
+#
+# merged = merge_lists(first_list, second_list)
+# print("Merged list: ", merged)
+#
+# ################# Homework 6-6
+#
+# def power_of_elements(list_num, power):
+#
+#     powered_list = [num ** power for num in list_num]
+#     return powered_list
+#
+# power = int(input("Enter number: "))
+#
+# powered_result = power_of_elements(list_num, power)
+# print("Powered list: ", power, powered_result)
+#
+#################################################################################################################################### 02.03.2024
 
-################ Homework 6
+# Напишіть функцію, яка визначає кількість простих чисел у списку цілих.
+# Список передається як параметр. Отриманий результат повертається із функції.
 
-import random
+# import random
+#
+#
+# def is_prime(number: int) -> bool:
+#     is_number_prime = True
+#
+#     for num in range(2, number):
+#         if number % num == 0:
+#             is_number_prime = False
+#             break
+#
+#     return is_number_prime
+#
+#
+# def get_prime_numbers(numbers: list[int]) -> int:
+#     prime_numbers_counter = 0
+#
+#     for num in numbers:
+#         if is_prime(num):
+#             print(num, end=" ")
+#             prime_numbers_counter += 1
+#
+#     print()
+#     return prime_numbers_counter
+#
+#
+# my_numbers = [random.randint(1, 20) for _ in range(10)]
+# print(my_numbers)
+# result = get_prime_numbers(my_numbers)
+# print(f"Prime numbers count: {result}")
 
-NUM_SIZE = 5
-list_num = []
+####################
+# def delete_item(numbers: list[int], number: int) -> int:
+#     deleted_item_counter = 0
+#
+#     for item in numbers:
+#         if item == number:
+#             numbers.remove(item)
+#             deleted_item_counter += 1
+#
+#     return deleted_item_counter
+#
+#
+# nums = [1, 3, 1, 5, 2, 6, 1, 3, 2, 5]
+# print(nums)
+# result = delete_item(nums, 1)
+# print(result)
+# print(nums)
 
-for i in range(NUM_SIZE):
-    list_num .append(random.randint(1, 5))
+##################
+# def hello(): print("Hello")
+#
+#
+# print(hello)
+# message = hello  # надав посилання на функцію в іншу змінну
+# print(message)
+#
+# hello()
+# message()
 
-print(list_num)
+#######
+# def add(a, b): return a + b
+# def sub(a, b): return a - b
+# def mult(a, b): return a * b
+# def division(a, b): return a / b
+#
+#
+# def select_math_operation(user_choice):
+#     match user_choice:
+#         case "+":
+#             return add
+#         case "-":
+#             return sub
+#         case "*":
+#             return mult
+#         case "/":
+#             return division
+#         case _:
+#             raise Exception("Invalid operation!")
+#
+#
+# try:
+#     operation = input("Enter math operation: ")
+#     math_operation = select_math_operation(operation)
+#     result = math_operation(4, 9)
+#     print(f"Result: {result}")
+# except Exception as error:
+#     print(error)
 
-################ Homework 6-1
+############
+# message = lambda: print("Hello world!")
+# message()
 
-def multiply_list_elements(list_num):
+####
+# square = lambda side_1, side_2: side_1 * side_2
+# print(square(2, 4))
 
-    result = 1
-    for num in list_num:
-        result *= num
-    return result
+####
+# def calculate(a, b, math_operation) -> None:
+#     print(f"Result: {math_operation(a, b)}")
+#
+#
+# calculate(2, 5, lambda n1, n2: n1 + n2)
+# calculate(2, 5, lambda n1, n2: n1 / n2)
 
-multiply_list = multiply_list_elements(list_num)
-print("Multiply list elements: ", multiply_list)
+################
+# def select_math_operation(user_choice):
+#     match user_choice:
+#         case "+":
+#             return lambda a, b: a + b  # повернення посилання на функцію
+#         case "-":
+#             return lambda a, b: a - b
+#         case "*":
+#             return lambda a, b: a * b
+#         case "/":
+#             return lambda a, b: a / b
+#         case _:
+#             raise Exception("Invalid operation!")
+#
+#
+# try:
+#     operation = input("Enter math operation: ")
+#     math_operation = select_math_operation(operation)
+#     result = math_operation(4, 9)
+#     print(f"Result: {result}")
+# except Exception as error:
+#     print(error)
 
-################# Homework 6-2
+############
+# LEGB - почитати
+# https://www.bestprog.net/uk/2020/07/29/python-the-scopes-of-names-in-python-local-names-visibility-rules-for-names-legb-rule-the-global-keyword-overriding-names-in-functions-ua/
 
-def find_minimum(list_num):
-    if not list_num:
-        return None
-    min_element = list_num[0]
-    for num in list_num:
-        if num < min_element:
-            min_element = num
-    return min_element
+#####
+# області видимості
+# number = 10
+#
+#
+# def test() -> None:
+#     number: int = 11  # перекриття глобальної змінної
+#
+#     if 1:
+#         # number = 12
+#
+#         if 1:
+#             # number = 13
+#             print(number)
+#     print(number)
+#
+#
+# print(number)
+# test()
+# print(number)
+# number = 35
+# print(number)
 
-min_value = find_minimum(list_num)
-print("Minimum in list: ", min_value)
+##########
+# number = 10
+#
+#
+# def test():
+#     global number
+#     number = 11  # змінюємо значення глобальної змінної
+#     print(number)
+#
+#
+# print(number)
+# test()
+# print(number)
 
-################# Homework 6-3
+#########
+# def outer():
+#     number = 1
+#
+#     def inner():
+#         nonlocal number
+#         number = 2
+#         print(number)
+#
+#     inner()
+#     print(number)
+#
+#
+# outer()
 
-def is_prime(n):
+#############
+###
+# number = 10
+#
+#
+# def outer():
+#     global number
+#     number = 1
+#     new_number = number
+#
+#     def inner():
+#         global number
+#         nonlocal new_number
+#         new_number = 2
+#         print(new_number)
+#         test = "Hello World!"
+#         number = 2
+#
+#         def inner_number_2():
+#             global number
+#             nonlocal new_number
+#             nonlocal test
+#             print(new_number)
+#             new_number = 3
+#             print(new_number)
+#             number = 3
+#             test = "qqqqq"
+#             print(test)
+#
+#         inner_number_2()
+#
+#     inner()
+#     print(new_number)
+#
+#
+# outer()
+# print(number)
 
-    if n <= 1:
-        return False
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
+#####################
+# Замикання (closure) представляє функцію, яка запам'ятовує своє лексичне оточення навіть у тому випадку,
+# коли вона виконується поза своєю областю видимості.
 
-def count_primes(list_num):
+# Зовнішня функція, яка визначає деяку область видимості і в якій визначені деякі
+# Змінні та параметри - лексичне оточення
+#
+# Змінні та параметри (лексичне оточення), які визначені у зовнішній функції
+#
+# вкладена функція, яка використовує змінні та параметри зовнішньої функції
 
-    count = 0
-    for num in list_num:
-        if is_prime(num):
-            count += 1
-    return count
+# def outer():
+#     number = 10
+#     print("outer")
+#     test = 10
+#     test_2 = 111
+#
+#     def inner():
+#         nonlocal number
+#         number += 1
+#         # print(test)
+#         print(number)
+#         # print("hello")
+#
+#     return inner
+#
+#
+# inner_func = outer()
+# inner_func()
+# inner_func()
+# inner_func()
 
-prime_count = count_primes(list_num)
-print("The number fo prime numbers in the list: ", prime_count)
+#####
+# v1
+# def multiply(num1):
+#     def inner(num2): return num1 * num2
+#     return inner
 
-################# Homework 6-4
+# v2
+# def multiply(num1): return lambda num2: num1 * num2
 
-def remove_element(list_num, target):
 
-    count_removed = 0
-    if target not in list_num:
-        print("There is no this number!")
+# def multiply_v2(num1, num2):
+#     return num1 * num2
+#
+#
+# for i in range(1, 10):
+#     print(f"{3} * {i} = {multiply_v2(3, i)}")
+
+
+# number1 = 3
+# mult_func = multiply(number1)
+# print(mult_func(4))
+# print(mult_func(5))
+# print(mult_func(7))
+#
+# for number2 in range(1, 10):
+#     print(f"{number1} * {number2} = {mult_func(number2)}")
+
+# додаткове завдання:
+# Вкладені функції, замикання, lambda -> почитати, продебажити та написати конспект
+
+##########
+#
+# Рекурсія – коли функція викликає сама себе
+# 1. продумати, яке або які параметри функції будуть змінені при рекурсивному виклику
+# 2. визначити умову або умови виходу з рекурсії
+# 3. запустити рекурсію (виклик цієї ж функції)
+
+# 5! => 1 * 2 * ... * 5
+# def factorial(number):
+#     if number <= 1:
+#         return 1
+#
+#     # factorial(number - 1) -> запуск рекурсії
+#     return number * factorial(number - 1)
+#
+#
+# print(factorial(5))
+# #
+# #
+# # factorial(5) -> 5 * factorial(4) => 120
+# # factorial(4) -> 4 * factorial(3) => 24
+# # factorial(3) -> 3 * factorial(2) => 6
+# # factorial(2) -> 2 * factorial(1) => 2
+# # factorial(1) => 1
+
+####
+# Написати рекурсивну функцію знаходження ступеня числа.
+# def my_pow(number, power):
+#     if power <= 1:
+#         return number
+#
+#     return number * my_pow(number, power - 1)
+#
+#
+# print(my_pow(2, 3))
+
+# my_pow(2, 3) -> 2 * my_pow(2, 2) => 8
+# my_pow(2, 2) -> 2 * my_pow(2, 1) => 4
+# my_pow(2, 1) => 2
+#
+# ################# Homework 7-1
+
+def my_pow(number, power):
+    if power <= 1:
+        return number
+
+    return number * my_pow(number, power - 1)
+
+
+print(my_pow(2, 3))
+
+# my_pow(2, 3) -> 2 * my_pow(2, 2) => 8
+# my_pow(2, 2) -> 2 * my_pow(2, 1) => 4
+# my_pow(2, 1) => 2
+
+# ################# Homework 7-2
+
+def print_stars(N):
+
+    if N == 0:
+        return
+
+    print("*")
+    print_stars(N - 1)
+while True:
+    try:
+        N = int(input("Enter number of stars: "))
+        break
+    except ValueError:
+        print("Enter only integer numbers!")
+
+print_stars(N)
+
+print()
+
+# ################# Homework 7-3
+
+def sum_range(a, b):
+
+    if a == b:
+        return a
+
     else:
-        while target in list_num:
-            list_num.remove(target)
-            count_removed += 1
-    return count_removed
+        return a + sum_range(a + 1, b)
 
-target_number =  int(input("Enter number to remove: "))
-removed_count = remove_element(list_num, target_number)
-print("Removed items count: ", removed_count)
-print("List after removing: ", list_num)
+while True:
+    try:
+        a = int(input("Enter start of the range (a): "))
+        b = int(input("Enter end of the range (b): "))
+        break
+    except ValueError:
+        print("Enter only integer numbers!")
 
-################# Homework 6-5
+result = sum_range(a, b)
+print("Sum of the numbers in range betwen a to b: ", result)
 
-first_list = [7, 5, 3, 5, 2]
-second_list = [4, 5, 6, 3]
-
-def merge_lists(first_list, second_list):
-
-    merged_list = first_list + second_list
-    return merged_list
-
-merged = merge_lists(first_list, second_list)
-print("Merged list: ", merged)
-
-################# Homework 6-6
-
-def power_of_elements(list_num, power):
-
-    powered_list = [num ** power for num in list_num]
-    return powered_list
-
-power = int(input("Enter number: "))
-
-powered_result = power_of_elements(list_num, power)
-print("Powered list: ", power, powered_result)
+# sum_range = 10
+# 1 + (2 + (3 + sum_range(4, 4)))
+# 1 + (2 + sum_range(3, 4))
+# 1 + sum_range(2, 4)
+# if: sum_range(1, 4)
