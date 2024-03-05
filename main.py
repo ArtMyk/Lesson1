@@ -792,110 +792,930 @@
 #
 #
 ################################# Homework 5 - 1
+#
+# import random
+#
+# NUM_SIZE = 10
+# numbers = []
+#
+# for i in range(NUM_SIZE):
+#     numbers.append(random.randint(-10, 10))
+#
+# print(numbers)
+#
+# sum_of_negative_numbers = 0
+#
+# for j in range(NUM_SIZE):
+#     if numbers[j] < 0:
+#         sum_of_negative_numbers += numbers[j]
+#
+# print("Sum of negative numbers: ", sum_of_negative_numbers)
+#
+# sum_of_even_numbers = 0
+#
+# for j in range(NUM_SIZE):
+#     if numbers[j]%2 == 0:
+#         sum_of_even_numbers += numbers[j]
+# print("Sum of even numbers: ", sum_of_even_numbers)
+#
+# sum_of_odd_numbers = 0
+#
+# for j in range(NUM_SIZE):
+#     if numbers[j]%2 != 0:
+#         sum_of_odd_numbers += numbers[j]
+#
+# print("Sum of odd numbers: ", sum_of_odd_numbers)
+#
+# sum_of_odd_numbers = 0
+#
+# for j in range(NUM_SIZE):
+#     if numbers[j]%2 == 0:
+#         sum_of_odd_numbers += numbers[j]
+#
+# print("Sum of odd numbers: ", sum_of_odd_numbers)
+#
+# sum_of_elements_with_multiple_of_3 = 0
+# for i in range(len(numbers)):
+#     if i % 3 == 0:
+#         sum_of_elements_with_multiple_of_3 += numbers[i]
+#
+# print("Sum of elements with multiple of 3:", sum_of_elements_with_multiple_of_3)
+#
+# min_index = numbers.index(min(numbers))
+# max_index = numbers.index(max(numbers))
+#
+# if min_index > max_index:
+#     min_index, max_index = max_index, min_index
+#
+# sum_btw_min_and_max_index = 0
+# for i in range(min_index + 1, max_index):
+#     sum_btw_min_and_max_index += numbers[i]
+#
+# print("Sum btw min and max index: ", sum_btw_min_and_max_index)
+#
+# first_positive_index = last_positive_index = 0
+# for i in range(NUM_SIZE):
+#     if numbers[i] > 0:
+#         first_positive_index = i
+#         break
+#
+# for i in range(NUM_SIZE -1, -1, -1):
+#     if numbers[i] > 0:
+#         last_positive_index = i
+#         break
+#
+# print(first_positive_index, last_positive_index)
+#
+# sum_btw_first_and_last_positive_elements = 0
+# for i in range(first_positive_index +1, last_positive_index):
+#     sum_btw_first_and_last_positive_elements = numbers[i]
+#
+# print("Sum btw first and last positive elements: ", sum_btw_first_and_last_positive_elements)
+#
+# ######################################### Homework 5-2
+#
+# import random
+#
+# NUM_SIZE = 10
+# numbers = []
+#
+# for i in range(NUM_SIZE):
+#     numbers.append(random.randint(-10, 10))
+#
+# print(numbers)
+#
+# numbers_even = [j for j in numbers if j % 2 == 0]
+#
+# print(numbers_even)
+#
+# numbers_odd = [j for j in numbers if j % 2 != 0]
+#
+# print(numbers_odd)
+#
+# nums_negative = [j for j in numbers if j < 0]
+#
+# print(nums_negative)
+#
+# nums_positive = [j for j in numbers if j > 0]
+#
+# print(nums_positive)
+
+############################################################################################################################################################################# 24.02.2024
+
+# У списку цілих, заповненому випадковими числами обчислити:
+# import random
+# # numbers = []
+# ARR_SIZE = 10
+# v1
+# for _ in range(ARR_SIZE):
+#     numbers.append(random.randint(-10, 10))
+# v2
+# numbers = [random.randint(-10, 10) for i in range(ARR_SIZE)]
+# print(numbers)
+# v3
+# numbers = [i for i in range(ARR_SIZE) if i % 2 == 0]
+# print(numbers)
+
+# negative_numbers_sum = 0
+# even_numbers_sum = 0
+# odd_numbers_sum = 0
+# result_sum = 0
+# for number in numbers:
+#     if number < 0:  # ■ Суму негативних чисел;
+#         negative_numbers_sum += number
+#     if number % 2 == 0:  # ■ Суму парних чисел;
+#         even_numbers_sum += number
+#     if number % 2 != 0:  # ■ Суму непарних чисел;
+#         odd_numbers_sum += number
+#     if number % 3 == 0:  # ■ Добуток елементів з кратними індексами 3;
+#         result_sum += number
+#
+# print(negative_numbers_sum)
+# print(even_numbers_sum)
+# print(odd_numbers_sum)
+# print(result_sum)
+
+# ■ Добуток елементів між мінімальним та максимальним елементом;
+# min_value_index = numbers.index(min(numbers))
+# max_value_index = numbers.index(max(numbers))
+#
+# if min_value_index > max_value_index:
+#     min_value_index, max_value_index = max_value_index, min_value_index
+#
+# result = 0
+# for i in range(min_value_index + 1, max_value_index):
+#     result += numbers[i]
+#
+# print(result)
+
+# ■ Суму елементів, що знаходяться між першим та останнім позитивними елементами.
+# first_positive_index = last_positive_index = 0
+# for i in range(ARR_SIZE):
+#     if numbers[i] > 0:
+#         first_positive_index = i
+#         break
+#
+# for i in range(ARR_SIZE - 1, -1, -1):
+#     if numbers[i] > 0:
+#         last_positive_index = i
+#         break
+#
+# print(first_positive_index, last_positive_index)
+#
+# result = 0
+# for i in range(first_positive_index + 1, last_positive_index):
+#     result += numbers[i]
+#
+# print(result)
+
+###################################################################################
+# Кортеж (tuple) – константний (immutable) список
+# можна працювати як зі звичайним списком,
+# тільки не можна нічого міняти (функції, які змінюють колекцію - відсутні в кортежі)
+# crud -> create, read, update, delete (у кортежі можна робити лише read)
+
+# info = ("test1", 123)
+# print(info)
+# print(type(info))
+#
+# info = "test2", 1234, 123445
+# print(info)
+# print(type(info))
+# #
+# print(info[0])
+#
+# info[0] = 123  # TypeError: 'tuple' object does not support item assignment
+
+# num = int(input("Enter number: "))
+# nums = 12, int(input("Enter number: ")), num
+# print(nums)
+
+#####
+# import copy
+#
+# info = "test2", 1234, 123445
+# test = copy.deepcopy(info)
+# print(test)
+#
+# info_copy = info
+# print(info_copy)
+# print(info)
+#
+# info_list = list(info)
+# print(info_list)
+# info_list.append(123)
+# print(info_list)
+# print(info)
+# info = tuple(info_list)
+# print(info)
+# print(info_list)
+# print(info[1:3])
+# print(info)
+
+###########
+# for num in 1, 3, 4, 5, 6, "Hello", 7:
+#     print(num)
+#
+# for i in range(5):  # 0, 1, 2, 3, 4
+#     print(i)
+#
+# for _ in range(5):
+#     print("Hello")
+
+# таку змінну створювати не можна так як оскільки її складно читати та зрозуміти
+# _ = "Vasya"
+# print(_)
+
+# print(range(5))
+# print(range(1, 5))
+# print(range(1, 5, 2))
+# result = range(5)
+# print(result)
+# print(type(result))
+#
+# numbers = list(range(10))
+# print(numbers)
+#
+# numbers = list(range(3, 10))
+# print(numbers)
+#
+# numbers = list(range(1, 10, 2))
+# print(numbers)
+#
+# numbers = list(range(10, 0, -1))
+# print(numbers)
+#
+# numbers = tuple(range(10, 0, -1))
+# print(numbers)
+#
+# result = sorted(numbers)
+# print(result)
+# print(numbers)
+
+#############
+##
+# dict -> словник, колекція key: value
+
+# users = {
+#     1: "John",
+#     2: "Vasya",
+#     3: "Petya",
+#     "key1": "some-value",
+#     2.4: 123,
+#     True: 111,
+#     2: "qwerty",  # дублювати ключі не можна!
+# }
+#
+# print(users)
+# print(type(users))
+# print(users[1])  # [1] -> це не індекс, а key
+# print(users["key1"])
+# print(users[2.4])
+# print(users[True])
+# print(users[2])
+#
+# users_list = [
+#     ("+111123455", None),
+#     ("+384767557", "Bob"),
+#     ("+958758767", "Alice")
+# ]
+#
+# users_dict = dict(users_list)
+# print(users_dict)
+#
+# users_list = list(users_dict)
+# print(users_list)
+
+###########
+##
+# users = {
+#     "+11111111": "Tom",
+#     "+33333333": "Bob",
+#     "+55555555": "Alice"
+# }
+
+# print(users["+33333333"])
+# users["+33333333"] = "Petya"
+# print(users["+33333333"])
+#
+# users["+4444444"] = "Test"
+# print(users["+4444444"])
+#
+# print(users)
+#
+# for key in users:
+#     print(users[key], end=" ")
+#
+# print()
+# #
+# for key in users.keys():
+#     print(key, end=" ")
+#
+# print()
+# print(users.keys())
+# print(list(users.keys()))
+# #
+# for value in users.values():
+#     print(value, end=" ")
+#
+# print()
+# print(users.values())
+#
+# print()
+# for key, value in users.items():
+#     print(f"key: {key} value: {value}")
+#
+# print()
+# print(users.items())
+
+#####
+# users = {
+#     "+11111111": "Tom",
+#     "+33333333": "Bob",
+#     "+55555555": "Alice"
+# }
+#
+# # print(users["+33333333"])
+# print(users.get("+33333333", "key not exists"))
+#
+# # del users["+55555555"]
+# deleted_value = users.pop("+555555551", "key not exists")
+# print(deleted_value)
+# print(users)
+#
+# users.clear()
+# print(users)
+
+##
+# users_1 = {
+#     "+11111111": "Tom",
+#     "+33333333": "Bob",
+#     "+55555555": "Alice"
+# }
+# #
+# users_copy = users_1.copy()
+#
+# print(users_1)
+# print(users_copy)
+# users_copy[111] = "qqqqqq"
+# print(users_1)
+# print(users_copy)
+#
+# users_2 = {
+#     "+11111111": "eeeeeee",
+#     "+44444": "qqqqqq",
+#     "+12341234": "wwwwwww"
+# }
+# #
+# users_1.update(users_2)
+# print(users_1)
+# print(users_2)
+
+################
+# json
+# users = {
+#     "Vasya": {
+#         "phone": "123123",
+#         "email": "qwerty1@gmail.com",
+#         "hobbies": ["one", "two", "three"]
+#     },
+#     "Petya": {
+#         "phone": "1345555",
+#         "email": "aqwfafdbsdb@gmail.com",
+#         "hobby": "uerhukjshbdjbkhdf",
+#         "add_data": {
+#             1: "test-1",
+#             2: "test-2",
+#         }
+#     }
+# }
+
+# print(users["Vasya"]["hobbies"][1])
+# print(users["Petya"]["add_data"][2])
+
+##
+# v1
+# key = input("Enter key: ")
+# if key in users:
+#     print(users[key])
+# else:
+#     print("Nothing found!")
+
+# v2
+# key = input("Enter key: ").strip().lower()
+# for curr_key in users.keys():
+#     if curr_key.lower() == key:
+#         print(users[curr_key])
+#         break
+# else:
+#     print("Nothing found!")
+
+##############
+# # Множини (set) представляють ще один вид набору, який зберігає тільки унікальні елементи.
+# Дублікати значень буде видалено.
+# users = {"Tom", "Bob", "Alice", "Tom"}
+# print(users)
+# print(type(users))
+# #
+# people = ["Mike", "Bill", "Ted"]
+# users = set(people)
+# print(users)
+# # # #
+# print(len(users))
+# # #
+# users.add("Sam")
+# print(users)
+# #
+# users = {"Tom", "Bob", "Alice"}
+# #
+# user = "Tom"
+# if user in users:
+#     users.remove(user)  # якщо немає значення – генерується виняток
+# print(users)
+# #
+# users = {"Tom", "Bob", "Alice"}
+# #
+# users.discard("Tim")  # елемент "Tim" відсутній, і метод нічого не робить
+# print(users)
+# # #
+# users.clear()
+# print(users)
+# #
+# users = {"Tom", "Bob", "Alice"}
+#
+# for user in users:
+#     print(user)
+#
+# # copy() копіювання працює так само як і в list, dict і тд
+#
+# users = {"Tom", "Bob", "Alice"}
+# users2 = {"Sam", "Kate", "Bob"}
+#
+# users3 = users.union(users2)
+# print(users3)
+#
+# users = {"Tom", "Bob", "Alice"}
+# users2 = {"Tom", "Sam", "Kate", "Bob"}
+#
+# # v1
+# users3 = users.intersection(users2)  # перетин множин (що загальне у першої множини з другим)
+# # v2
+# print(users & users2)
+# print(users3)
+#
+# users = {"Tom", "Bob", "Alice"}
+# users2 = {"Sam", "Kate", "Bob"}
+# users.intersection_update(users2)  # те саме, тільки результат буде записаний в users
+# print(users)
+#
+# users = {"Tom", "Bob", "Alice"}
+# users2 = {"Sam", "Kate", "Bob"}
+#
+# # v1
+# users3 = users.difference(users2)  # що є тільки першим і немає у другій множині
+# print(users3)  # {"Tom", "Alice"}
+# # v2
+# print(users - users2)
+# #
+# users.difference_update(users2)
+# print(users)
+# print(users2)
+# #
+# users = {"Tom", "Bob", "Alice"}
+# users2 = {"Sam", "Kate", "Bob"}
+#
+# # v1
+# users3 = users.symmetric_difference(users2)  # унікальні значення першої та другої множин
+# print(users3)
+# # v2
+# users4 = users ^ users2
+#
+# ##
+# users = {"Tom", "Bob", "Alice"}
+# superusers = {"Sam", "Tom", "Bob", "Alice", "Greg"}
+#
+# print(users.issubset(superusers))  # True
+# print(superusers.issubset(users))  # False
+#
+#
+# users = {"Tom", "Bob", "Alice"}
+# superusers = {"Sam", "Tom", "Bob", "Alice", "Greg"}
+#
+# print(users.issuperset(superusers))  # False
+# print(superusers.issuperset(users))  # True
+#
+#
+# # Тип frozen set є видом множин, які не можуть бути змінені (за типом tuple у list)
+# users = frozenset({"Tom", "Bob", "Alice"})
+# print(users)
+# users = set(users)
+# print(users)
+# # можна використовувати всі функції звичайного set, крім тих, що модифікують значення
+#
+####################################################################################################################################################################   28.01.2024
+# # створити матрицю 10 на 10, заповнити рандомними значеннями від 10 до 99
+# import random
+#
+# numbers = []
+#
+# for i in range(5):
+#     numbers.append([])
+#     for j in range(5):
+#         numbers[i].append(random.randint(10, 99))
+#
+# for i in range(5):
+#     for j in range(5):
+#         print(numbers[i][j], end=" ")
+#     print()
+#
+# # - ввести з клавіатури порядковий номер одного стовпця і потім іншого стовпця і поміняти їх місцями в матрицю
+# # (аналогічно зробити з рядком)
+#
+# first_col = 2
+# second_col = 4
+#
+# if 0 < first_col <= 5 and 0 < second_col <= 5:
+#     for i in range(5):
+#         numbers[i][first_col - 1], numbers[i][second_col - 1] = numbers[i][second_col - 1], numbers[i][first_col - 1]
+# else:
+#     print("Invalid columns!")
+#
+# print()
+# for i in range(5):
+#     for j in range(5):
+#         print(numbers[i][j], end=" ")
+#     print()
+#
+# print()
+# first_row = 2
+# second_row = 4
+#
+# if 0 < first_row <= 5 and 0 < second_row <= 5:
+#     numbers[first_row - 1], numbers[second_row - 1] = numbers[second_row - 1], numbers[first_row - 1]
+#     # print(numbers[first_row - 1])
+#     # print(numbers[second_row - 1])
+# else:
+#     print("Invalid rows!")
+#
+# for i in range(5):
+#     for j in range(5):
+#         print(numbers[i][j], end=" ")
+#     print()
+#
+# print()
+
+#############
+# def say_hello():
+#     print("Hello")
+#
+#
+# try:
+#     number = 10
+#     print(number)
+#     print(say_hello)
+#     say_hello()  # виклик функції (функція починає працювати)
+#     say_hello()
+# except Exception:
+#     print("Something went wrong")
+#
+#
+# def say_hello():
+#     print("Hello Friends!")
+#
+#
+# say_hello()
+#
+#
+# def say_hello(name):
+#     print(f"Hello {name}!")
+#     name = "qqqq"
+#     print(f"Hello {name}!")
+#
+#
+# say_hello("Test user")
+# name = "Anton"
+# say_hello(name)
+# print(name)
+
+# def say_hello_name(username):
+#     print(f"Hello, {username}")
+#
+#
+# say_hello_name("Vasya")
+# name = "Petya"
+# say_hello_name(name)
+#
+# number: int = 10
+# print(number)
+
+# def user_info(name: str, age: int, hobby: str) -> None:
+#     print(f"Welcome, {name}! Your age: {age} and hobby is {hobby}")
+#
+#
+# try:
+#     name = input("Enter your name: ")
+#     age = int(input("Enter your age: "))
+#     user_hobby = input("Enter your hobby: ")
+#     user_info(name, age, user_hobby)
+# except Exception as e:
+#     print(e)
+
+########
+# після того як відпрацює ключове слово return - функція припиняє свою роботу (тільки функція)
+# return – поверне результат роботи функції. Після відпрацьовування return - решта дій функції не відпрацюють
+# та функція завершить свою роботу. Якщо у функції є цикл - у циклi return працює як break,
+# але на відміну від break – поверне результат, а не просто
+# Зупинить дії. Якщо функції є цикли, і в одному з циклів спрацював return - функція припинить свою роботу.
+# ключове слово return може зустрічатися в тілі функції скільки завгодно разів
+
+# if isinstance(n1, int) or isinstance(n1, float):
+# def add(n1, n2):
+#     return n1 + n2
+#
+#
+# def sub(n1, n2):
+#     return n1 - n2
+#
+#
+# def mult(n1, n2):
+#     return n1 * n2
+#
+#
+# def division(n1, n2):
+#     return n1 / n2
+#
+#
+# def calculate() -> None:
+#     first_number = int(input("Enter first number: "))
+#     second_number = int(input("Enter second number: "))
+#     math_operation = input("Enter math operation + - * / ")
+#
+#     match math_operation:
+#         case "+":
+#             print(f"{first_number} {math_operation} {second_number} = {add(first_number, second_number)}")
+#         case "-":
+#             print(f"{first_number} {math_operation} {second_number} = {sub(first_number, second_number)}")
+#         case "*":
+#             print(f"{first_number} {math_operation} {second_number} = {mult(first_number, second_number)}")
+#         case "/":
+#             print(f"{first_number} {math_operation} {second_number} = {division(first_number, second_number)}")
+#         case _:
+#             raise Exception("Invalid math operation!")
+#
+#
+# try:
+#     calculate()
+# except ZeroDivisionError:
+#     print("Do not divide by zero please!")
+# except Exception as error:
+#     print(error)
+
+###
+# def test():
+#     return 10
+#
+#
+# print(test())
+#
+#
+# def test():
+#     print("hello")
+#
+#
+# print(test())
+###
+
+# def user_info(name: str, age: int = 18, hobby: str = "no hobby") -> None:
+#     print(f"Welcome, {name}! Your age: {age} and hobby is {hobby}")
+#
+#
+# # user_info("Vasya", 33, "test")
+# # user_info("Vasya", 33)
+# # user_info("Vasya")
+#
+# # user_info("walking", "Petya", 33)
+# user_info(hobby="walking", name="Petya", age=33)
+
+#####
+## Усі параметри,
+# які розташовуються праворуч від символу *, отримують значення лише на ім'я:
+
+# def print_person(name, *, age, company):
+#     print(f"Name: {name}  Age: {age}  Company: {company}")
+#
+#
+# print_person("Bob", age=41, company="Microsoft")
+#
+#
+# def print_person(*, name, age, company):
+#     print(f"Name: {name}  Age: {age}  Company: {company}")
+#
+#
+# print_person(name="Bob", age=41, company="Microsoft")
+
+# Якщо навпаки треба визначити параметри, яким можна передавати значення лише за позицією,
+# тобто позиційні параметри, можна використовувати символ /: всі параметри, які йдуть до символу / ,
+# є позиційними і можуть отримувати значення лише за позицією
+
+# def print_person(name, /, age, company="Microsoft"):
+#     print(f"Name: {name}  Age: {age}  Company: {company}")
+#
+#
+# print_person("Tom", company="JetBrains", age=24)  # Name: Tom  Age: 24  company: JetBrains
+# print_person("Bob", 41)
+
+#
+# def print_person(name, /, age=18, *, company):
+#     print(f"Name: {name}  Age: {age}  Company: {company}")
+#
+#
+# print_person("Sam", company="Google")  # Name: Sam  Age: 18  company: Google
+# print_person("Tom", 37, company="JetBrains")  # Name: Tom  Age: 37  company: JetBrains
+# print_person("Bob", company="Microsoft", age=42)  # Name: Bob  Age: 42  company: Microsoft
+
+####
+# import random
+# import string
+#
+# PASSWORD_DATA = string.ascii_letters + string.digits + string.punctuation
+# MIN_PASSWORD_LENGTH = 16
+# MAX_PASSWORD_LENGTH = 32
+#
+#
+# def generate_password(password_length: int, initial_password_data: str) -> str:
+#     if password_length < MIN_PASSWORD_LENGTH or password_length > MAX_PASSWORD_LENGTH:
+#         raise Exception(f"Provided password length must be between {MIN_PASSWORD_LENGTH} and {MAX_PASSWORD_LENGTH}")
+#     password = ""
+#     for _ in range(password_length):
+#         password += random.choice(initial_password_data)
+#
+#     return password
+#
+#
+# try:
+#     new_password = generate_password(1, PASSWORD_DATA)
+#     print(f"New password: {new_password}")
+# except Exception as error:
+#     print(error)
+
+###############
+# import random
+#
+# words = ["Cat", "Apple", "Dog", "Letter", "Helicopter"]
+#
+# secret_word = random.choice(words)
+# # print(secret_word)
+#
+# # print("_" * len(secret_word))
+# user_word = ["_"] * len(secret_word)
+#
+# attempts_counter = 0
+#
+# while True:
+#     # v1
+#     if "".join(user_word).find("_") == -1:
+#         print(f"\nYou guessed the word {secret_word}!\nAttempts: {attempts_counter}")
+#         break
+#     # v2
+#     # if "".join(user_word).lower() == secret_word.lower():
+#     #     print(f"\nYou guessed the word {secret_word}!\nAttempts: {attempts_counter}")
+#     #     break
+#
+#     print(" ".join(user_word))
+#
+#     letter = input("Enter a letter: ").strip().lower()
+#
+#     if not letter.isalpha() or len(letter) != 1:
+#         print("Please enter only one letter!")
+#         continue
+#
+#     attempts_counter += 1
+#
+#     for i in range(len(secret_word)):
+#         if letter == secret_word[i].lower():
+#             user_word[i] = letter
+
+# добавить ограничение на кол-во попыток, если не уложились в кол-во - проиграли
+
+# добавить:
+# - два уровня сложности
+# легкий уровень: кол-во попыток равно длина слова * 2 -> если не угадал - вывести сообщение об этом
+# сложный уровень: кол-во попыток равно длина слова * 1.5 -> если не угадал - вывести сообщение об этом
+# показывать сколько попыток осталось
+# - обработку исключений
+# #
+# import random
+#
+# NUM_SIZE = 10
+# list_num = []
+#
+# for i in range(NUM_SIZE):
+#     list_num .append(random.randint(0, 20))
+#
+# print(list_num)
+#
+# product = list_num.mult(list_num)
+# print("Добуток елементів списку:", list_num)
+
+################ Homework 6
 
 import random
 
-NUM_SIZE = 10
-numbers = []
+NUM_SIZE = 5
+list_num = []
 
 for i in range(NUM_SIZE):
-    numbers.append(random.randint(-10, 10))
+    list_num .append(random.randint(1, 5))
 
-print(numbers)
+print(list_num)
 
-sum_of_negative_numbers = 0
+################ Homework 6-1
 
-for j in range(NUM_SIZE):
-    if numbers[j] < 0:
-        sum_of_negative_numbers += numbers[j]
+def multiply_list_elements(list_num):
 
-print("Sum of negative numbers: ", sum_of_negative_numbers)
+    result = 1
+    for num in list_num:
+        result *= num
+    return result
 
-sum_of_even_numbers = 0
+multiply_list = multiply_list_elements(list_num)
+print("Multiply list elements: ", multiply_list)
 
-for j in range(NUM_SIZE):
-    if numbers[j]%2 == 0:
-        sum_of_even_numbers += numbers[j]
-print("Sum of even numbers: ", sum_of_even_numbers)
+################# Homework 6-2
 
-sum_of_odd_numbers = 0
+def find_minimum(list_num):
+    if not list_num:
+        return None
+    min_element = list_num[0]
+    for num in list_num:
+        if num < min_element:
+            min_element = num
+    return min_element
 
-for j in range(NUM_SIZE):
-    if numbers[j]%2 != 0:
-        sum_of_odd_numbers += numbers[j]
+min_value = find_minimum(list_num)
+print("Minimum in list: ", min_value)
 
-print("Sum of odd numbers: ", sum_of_odd_numbers)
+################# Homework 6-3
 
-sum_of_odd_numbers = 0
+def is_prime(n):
 
-for j in range(NUM_SIZE):
-    if numbers[j]%2 == 0:
-        sum_of_odd_numbers += numbers[j]
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
 
-print("Sum of odd numbers: ", sum_of_odd_numbers)
+def count_primes(list_num):
 
-sum_of_elements_with_multiple_of_3 = 0
-for i in range(len(numbers)):
-    if i % 3 == 0:
-        sum_of_elements_with_multiple_of_3 += numbers[i]
+    count = 0
+    for num in list_num:
+        if is_prime(num):
+            count += 1
+    return count
 
-print("Sum of elements with multiple of 3:", sum_of_elements_with_multiple_of_3)
+prime_count = count_primes(list_num)
+print("The number fo prime numbers in the list: ", prime_count)
 
-min_index = numbers.index(min(numbers))
-max_index = numbers.index(max(numbers))
+################# Homework 6-4
 
-if min_index > max_index:
-    min_index, max_index = max_index, min_index
+def remove_element(list_num, target):
 
-sum_btw_min_and_max_index = 0
-for i in range(min_index + 1, max_index):
-    sum_btw_min_and_max_index += numbers[i]
+    count_removed = 0
+    if target not in list_num:
+        print("There is no this number!")
+    else:
+        while target in list_num:
+            list_num.remove(target)
+            count_removed += 1
+    return count_removed
 
-print("Sum btw min and max index: ", sum_btw_min_and_max_index)
+target_number =  int(input("Enter number to remove: "))
+removed_count = remove_element(list_num, target_number)
+print("Removed items count: ", removed_count)
+print("List after removing: ", list_num)
 
-first_positive_index = last_positive_index = 0
-for i in range(NUM_SIZE):
-    if numbers[i] > 0:
-        first_positive_index = i
-        break
+################# Homework 6-5
 
-for i in range(NUM_SIZE -1, -1, -1):
-    if numbers[i] > 0:
-        last_positive_index = i
-        break
+first_list = [7, 5, 3, 5, 2]
+second_list = [4, 5, 6, 3]
 
-print(first_positive_index, last_positive_index)
+def merge_lists(first_list, second_list):
 
-sum_btw_first_and_last_positive_elements = 0
-for i in range(first_positive_index +1, last_positive_index):
-    sum_btw_first_and_last_positive_elements = numbers[i]
+    merged_list = first_list + second_list
+    return merged_list
 
-print("Sum btw first and last positive elements: ", sum_btw_first_and_last_positive_elements)
+merged = merge_lists(first_list, second_list)
+print("Merged list: ", merged)
 
-######################################### Homework 5-2
+################# Homework 6-6
 
-import random
+def power_of_elements(list_num, power):
 
-NUM_SIZE = 10
-numbers = []
+    powered_list = [num ** power for num in list_num]
+    return powered_list
 
-for i in range(NUM_SIZE):
-    numbers.append(random.randint(-10, 10))
+power = int(input("Enter number: "))
 
-print(numbers)
-
-numbers_even = [j for j in numbers if j % 2 == 0]
-
-print(numbers_even)
-
-numbers_odd = [j for j in numbers if j % 2 != 0]
-
-print(numbers_odd)
-
-nums_negative = [j for j in numbers if j < 0]
-
-print(nums_negative)
-
-nums_positive = [j for j in numbers if j > 0]
-
-print(nums_positive)
+powered_result = power_of_elements(list_num, power)
+print("Powered list: ", power, powered_result)
